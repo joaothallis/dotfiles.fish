@@ -1,0 +1,14 @@
+name: fish
+
+on: push
+
+jobs:
+  check-formatted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fish-actions/install-fish@v1.1.0
+
+      - uses: actions/checkout@v2
+
+      - name: check-formatted
+        run: fish_indent --check .config/fish/*/** .config/fish/config.fish
