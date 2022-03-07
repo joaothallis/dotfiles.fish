@@ -4,3 +4,5 @@ if status is-interactive
 end
 
 set -gx EDITOR nvim
+
+source /opt/asdf-vm/asdf.fish
