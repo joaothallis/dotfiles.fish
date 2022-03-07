@@ -60,7 +60,7 @@ end
 local servers = {'elixirls'}
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
-        cmd = {"/opt/homebrew/bin/elixir-ls"},
+        cmd = {"elixir-ls"},
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150
