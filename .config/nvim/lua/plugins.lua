@@ -7,7 +7,7 @@ return require('packer').startup(function()
 
     use "sbdchd/neoformat"
 
-    use "neovim/nvim-lspconfig"
+    use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
