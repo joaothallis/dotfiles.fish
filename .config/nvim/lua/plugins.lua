@@ -21,5 +21,10 @@ return require('packer').startup(function()
     use "Olical/vim-enmasse"
 
     use {'tanvirtin/vgit.nvim', requires = {'nvim-lua/plenary.nvim'}}
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function() require('Comment').setup() end
+    }
 end)
 

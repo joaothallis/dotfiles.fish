@@ -93,3 +93,5 @@ vim.api.nvim_set_keymap('n', '<Leader>fg', ":Telescope live_grep<CR>",
 
 require('vgit').setup()
 
+require('Comment').setup()
+
