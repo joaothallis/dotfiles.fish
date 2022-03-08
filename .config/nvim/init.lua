@@ -62,6 +62,29 @@ local on_attach = function(client, bufnr)
                                 '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+local lsp_installer = require "nvim-lsp-installer"
+
+local servers = {"dockerls"}
+
+for _, name in pairs(servers) do
+    local server_is_found, server = lsp_installer.get_server(name)
+    if server_is_found and not server:is_installed() then
+        print("Installing " .. name)
+        server:install()
+    end
+end
+
+for _, name in pairs(servers) do
+    lsp_installer.on_server_ready(function(server)
+        local opts = {
+            on_attach = on_attach,
+            flags = {debounce_text_changes = 150}
+        }
+
+        server:setup(opts)
+    end)
+end
+
 local servers = {'jsonls'}
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
