@@ -5,4 +5,7 @@ end
 
 set -gx EDITOR nvim
 
-source /opt/asdf-vm/asdf.fish
+switch (uname)
+case Linux
+    source /opt/asdf-vm/asdf.fish
+end
