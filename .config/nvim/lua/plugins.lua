@@ -8,6 +8,8 @@ return require('packer').startup(function()
         requires = {{'tyru/open-browser.vim'}}
     }
 
+    use "sbdchd/neoformat"
+
     use "neovim/nvim-lspconfig"
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
