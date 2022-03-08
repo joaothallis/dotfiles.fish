@@ -19,5 +19,7 @@ return require('packer').startup(function()
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
 
     use "Olical/vim-enmasse"
+
+    use {'tanvirtin/vgit.nvim', requires = {'nvim-lua/plenary.nvim'}}
 end)
 
