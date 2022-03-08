@@ -57,16 +57,19 @@ local on_attach = function(client, bufnr)
                                 '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local servers = {'elixirls'}
+local servers = {'jsonls'}
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
-        cmd = {"elixir-ls"},
         on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150
-        }
+        flags = {debounce_text_changes = 150}
     }
 end
+
+require'lspconfig'.elixirls.setup {
+    cmd = {"elixir-ls"},
+    on_attach = on_attach,
+    flags = {debounce_text_changes = 150}
+}
 
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {"elixir"},

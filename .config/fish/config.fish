@@ -6,6 +6,6 @@ end
 set -gx EDITOR nvim
 
 switch (uname)
-case Linux
-    source /opt/asdf-vm/asdf.fish
+    case Linux
+        source /opt/asdf-vm/asdf.fish
 end
