@@ -69,10 +69,8 @@ for _, lsp in pairs(servers) do
 end
 
 require'nvim-treesitter.configs'.setup {
-    -- One of "all", "maintained" (parsers with maintainers), or a list of languages
     ensure_installed = {"elixir"},
 
-    -- Install languages synchronously (only applied to `ensure_installed`)
     sync_install = true,
 
     highlight = {enable = true, additional_vim_regex_highlighting = false}
