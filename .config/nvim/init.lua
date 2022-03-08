@@ -7,8 +7,13 @@ o.swapfile = false
 require('plugins')
 
 vim.opt.termguicolors = true
-vim.g.vscode_style = "dark"
 vim.api.nvim_command 'colorscheme vscode'
+
+if (os.date("%H") < "6" or os.date("%H") > "18") then
+    vim.g.vscode_style = "dark"
+else
+    vim.g.vscode_style = "light"
+end
 
 local opts = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<space>e',
