@@ -3,6 +3,11 @@ return require('packer').startup(function()
 
     use 'Mofiqul/vscode.nvim'
 
+    use {
+        'tyru/open-browser-github.vim',
+        requires = {{'tyru/open-browser.vim'}}
+    }
+
     use "neovim/nvim-lspconfig"
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
