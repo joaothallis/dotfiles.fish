@@ -13,7 +13,10 @@ return require('packer').startup(function()
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-    use {'junegunn/fzf.vim'}
+    use {
+        'junegunn/fzf.vim',
+        requires = {'junegunn/fzf', run = './install --bin'}
+    }
 
     use "Olical/vim-enmasse"
 
