@@ -13,13 +13,6 @@ return require('packer').startup(function()
 
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {{'nvim-lua/plenary.nvim'}}
-    }
-
-    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
-
     use {'junegunn/fzf.vim'}
 
     use "Olical/vim-enmasse"
