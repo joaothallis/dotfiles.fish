@@ -9,6 +9,8 @@ require('plugins')
 vim.opt.termguicolors = true
 vim.api.nvim_command 'colorscheme rvcs'
 
+vim.api.nvim_set_keymap('n', '<Leader>ff', ":GitFiles<CR>", {noremap = true})
+
 local opts = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<space>e',
                         '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
