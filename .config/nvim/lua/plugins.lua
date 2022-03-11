@@ -26,5 +26,7 @@ return require('packer').startup(function()
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
     }
+
+    use {'bogado/file-line'}
 end)
 
