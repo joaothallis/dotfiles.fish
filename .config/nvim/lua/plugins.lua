@@ -7,6 +7,8 @@ return require('packer').startup(function()
 
     use {'tyru/open-browser-github.vim', requires = {{'tyru/open-browser.vim'}}}
 
+    use {'janko/vim-test', requires = {{'benmills/vimux'}}}
+
     use "sbdchd/neoformat"
 
     use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
