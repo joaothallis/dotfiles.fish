@@ -27,6 +27,15 @@ let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 vim.api.nvim_set_keymap('n', '<Leader>ff', ":GitFiles<CR>", {noremap = true})
 
+vim.cmd([[
+let g:test#echo_command = 0
+
+if exists('$TMUX')
+  let g:test#preserve_screen = 1
+  let g:test#strategy = 'vimux'
+endif
+]])
+
 local opts = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<space>e',
                         '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
