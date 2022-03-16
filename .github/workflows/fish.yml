@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: check-formatted
-        run: fish_indent --check .config/fish/*/** .config/fish/config.fish
+        run: fish_indent --check .config/fish/*/** .config/fish/config.fish abbreviations.fish
