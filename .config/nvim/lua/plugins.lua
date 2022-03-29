@@ -22,6 +22,8 @@ return require('packer').startup(function()
 
     use {'tanvirtin/vgit.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
+    use {'tpope/vim-fugitive'}
+
     use {
         'numToStr/Comment.nvim',
         config = function() require('Comment').setup() end
