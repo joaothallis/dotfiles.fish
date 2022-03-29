@@ -23,6 +23,7 @@ return require('packer').startup(function()
     use {'tanvirtin/vgit.nvim', requires = {'nvim-lua/plenary.nvim'}}
 
     use {'tpope/vim-fugitive'}
+    use {'rhysd/committia.vim'}
 
     use {
         'numToStr/Comment.nvim',
