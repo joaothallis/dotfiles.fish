@@ -124,14 +124,6 @@ require'lspconfig'.elixirls.setup {
     flags = {debounce_text_changes = 150}
 }
 
-require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"elixir"},
-
-    sync_install = true,
-
-    highlight = {enable = true, additional_vim_regex_highlighting = false}
-}
-
 require('vgit').setup()
 
 require('gitsigns').setup {

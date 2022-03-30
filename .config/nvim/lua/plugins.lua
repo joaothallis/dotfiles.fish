@@ -11,8 +11,6 @@ return require('packer').startup(function()
 
     use {'neovim/nvim-lspconfig', 'williamboman/nvim-lsp-installer'}
 
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-
     use {
         'junegunn/fzf.vim',
         requires = {'junegunn/fzf', run = './install --bin'}
