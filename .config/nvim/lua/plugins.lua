@@ -24,6 +24,7 @@ return require('packer').startup(function()
 
     use {'tpope/vim-fugitive'}
     use {'rhysd/committia.vim'}
+    use {'lewis6991/gitsigns.nvim'}
 
     use {
         'numToStr/Comment.nvim',
