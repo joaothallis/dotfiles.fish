@@ -27,7 +27,9 @@ let $FZF_DEFAULT_OPTS = '--bind ctrl-a:select-all'
 
 vim.api.nvim_set_keymap('n', '<Leader>ff', ":GitFiles<CR>", {noremap = true})
 
-vim.api.nvim_set_keymap('n', '<Leader><Leader>', ":call ElixirAlternateFile()<CR>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Leader><Leader>',
+                        ":call ElixirAlternateFile()<CR>",
+                        {noremap = true, silent = true})
 
 vim.cmd([[
 let g:test#echo_command = 0
