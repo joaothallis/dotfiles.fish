@@ -169,3 +169,4 @@ require('gitsigns').setup {
 
 require('Comment').setup()
 
+vim.g.copilot_enabled = false
