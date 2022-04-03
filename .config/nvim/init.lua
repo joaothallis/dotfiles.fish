@@ -10,6 +10,11 @@ vim.opt.termguicolors = true
 vim.api.nvim_command 'colorscheme rvcs'
 
 vim.cmd([[
+let g:web_search_command = 'open'
+let g:web_search_query_suffix = ' \!'
+]])
+
+vim.cmd([[
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val }'))
   copen
