@@ -18,8 +18,6 @@ return require('packer').startup(function()
 
     use "Olical/vim-enmasse"
 
-    use {'tanvirtin/vgit.nvim', requires = {'nvim-lua/plenary.nvim'}}
-
     use {'tpope/vim-fugitive'}
     use {'rhysd/committia.vim'}
     use {'lewis6991/gitsigns.nvim'}

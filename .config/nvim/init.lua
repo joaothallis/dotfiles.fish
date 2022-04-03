@@ -129,8 +129,6 @@ require'lspconfig'.elixirls.setup {
     flags = {debounce_text_changes = 150}
 }
 
-require('vgit').setup()
-
 require('gitsigns').setup {
     on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
