@@ -16,10 +16,10 @@ return require('packer').startup(function()
         requires = {'junegunn/fzf', run = './install --bin'}
     }
 
-    use "Olical/vim-enmasse"
+    use {"Olical/vim-enmasse", ft = {'qf'}}
 
     use {'tpope/vim-fugitive'}
-    use {'rhysd/committia.vim'}
+    use {'rhysd/committia.vim', ft = {'gitcommit'}}
     use {'lewis6991/gitsigns.nvim'}
 
     use {
@@ -29,8 +29,11 @@ return require('packer').startup(function()
 
     use {'bogado/file-line'}
 
-    use {'elixir-editors/vim-elixir'}
-    use {'joaothallis/vim-elixir-alternative-files'}
+    use {
+        'elixir-editors/vim-elixir',
+        ft = {'elixir', 'eelixir', 'heex', 'surface'}
+    }
+    use {'joaothallis/vim-elixir-alternative-files', ft = {'elixir'}}
 
     use {'github/copilot.vim'}
 
