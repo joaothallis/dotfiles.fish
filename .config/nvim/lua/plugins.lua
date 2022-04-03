@@ -29,6 +29,7 @@ return require('packer').startup(function()
 
     use {'bogado/file-line'}
 
+    use {'elixir-editors/vim-elixir'}
     use {'joaothallis/vim-elixir-alternative-files'}
 
     use {'github/copilot.vim'}
