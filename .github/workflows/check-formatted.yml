@@ -1,0 +1,23 @@
+name: check-formatted
+
+on: push
+
+jobs:
+  check-formatted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fish-actions/install-fish@v1.1.0
+
+      - uses: actions/checkout@v2
+
+      - name: Check fish code is formatted
+        run: fish_indent --check .config/fish/*/** .config/fish/*.fish
+
+      - uses: leafo/gh-actions-lua@v9
+      - uses: leafo/gh-actions-luarocks@v4
+
+      - name: Install lua-format
+        run: luarocks install --server=https://luarocks.org/dev luaformatter
+
+      - name: Check lua code is formatted
+        run: lua-format --check .config/nvim/lua/plugins.lua .config/nvim/init.lua
