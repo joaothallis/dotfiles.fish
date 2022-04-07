@@ -21,3 +21,5 @@ abbr --add --universal mf 'mix format'
 abbr --add --universal mc 'mix credo --strict'
 abbr --add --universal md 'mix dialyzer'
 abbr --add --universal m 'mix coveralls.html --umbrella && open cover/excoveralls.html'
+
+abbr --add --universal t tmux_new
