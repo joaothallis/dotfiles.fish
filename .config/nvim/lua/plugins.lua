@@ -18,6 +18,8 @@ return require('packer').startup(function()
 
     use {"Olical/vim-enmasse"}
 
+    use "airblade/vim-rooter"
+
     use {'tpope/vim-fugitive'}
     use {'rhysd/committia.vim'}
     use {'lewis6991/gitsigns.nvim'}
