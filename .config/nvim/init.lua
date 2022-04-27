@@ -94,7 +94,7 @@ end
 
 local lsp_installer = require "nvim-lsp-installer"
 
-local servers = {"dockerls", "ccls", "jsonls"}
+local servers = {"dockerls", "ccls", "jsonls", "elixirls"}
 
 for _, name in pairs(servers) do
     local server_is_found, server = lsp_installer.get_server(name)
@@ -114,12 +114,6 @@ for _, name in pairs(servers) do
         server:setup(opts)
     end)
 end
-
-require'lspconfig'.elixirls.setup {
-    cmd = {"elixir-ls"},
-    on_attach = on_attach,
-    flags = {debounce_text_changes = 150}
-}
 
 require('gitsigns').setup {
     on_attach = function(bufnr)
