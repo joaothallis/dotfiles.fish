@@ -7,7 +7,6 @@ o.swapfile = false
 require('plugins')
 
 vim.opt.termguicolors = true
-vim.api.nvim_command 'colorscheme rvcs'
 
 vim.cmd([[
 let g:web_search_command = 'open'
