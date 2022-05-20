@@ -1,6 +1,7 @@
 abbr --add --universal config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 abbr --add --universal g git
+abbr --add --universal gr 'git reset --hard'
 abbr --add --universal gs 'git status'
 abbr --add --universal gd 'git diff'
 abbr --add --universal gl 'git pull'
