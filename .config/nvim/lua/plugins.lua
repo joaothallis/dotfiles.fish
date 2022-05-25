@@ -33,7 +33,5 @@ return require('packer').startup(function()
     use {'joaothallis/vim-elixir-alternative-files'}
 
     use {'github/copilot.vim'}
-
-    use {'joaothallis/vim-websearch', branch = 'feat/query-suffix'}
 end)
 
