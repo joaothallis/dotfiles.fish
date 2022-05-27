@@ -39,6 +39,14 @@ if exists('$TMUX')
 endif
 ]])
 
+require'nvim-treesitter.configs'.setup {
+    ensure_installed = {"heex"},
+
+    sync_install = true,
+
+    highlight = {enable = true, additional_vim_regex_highlighting = false}
+}
+
 local opts = {noremap = true, silent = true}
 vim.api.nvim_set_keymap('n', '<space>e',
                         '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
