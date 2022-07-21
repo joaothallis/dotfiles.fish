@@ -15,7 +15,7 @@ abbr --add --universal gmm 'git checkout master && git pull --rebase && git chec
 abbr --add --universal gpr 'gh pr create'
 
 abbr --add --universal rc 'docker stop (docker ps --all --quiet) && docker rm (docker ps --all --quiet)'
-abbr --add --universal rca 'docker stop (docker ps --all --quiet) && docker rm (docker ps --all --quiet) && docker-compose up -d'
+abbr --add --universal upn 'docker stop (docker ps --all --quiet) && docker rm (docker ps --all --quiet) && docker-compose up -d'
 
 abbr --add --universal k kubectl
 
