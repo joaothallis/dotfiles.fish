@@ -1,4 +1,5 @@
 local o = vim.o
+local g = vim.g
 
 o.clipboard = "unnamedplus"
 
@@ -38,6 +39,8 @@ if exists('$TMUX')
   let g:test#strategy = 'vimux'
 endif
 ]])
+
+g.markdown_fenced_languages = {"python", "elixir"}
 
 require'nvim-treesitter.configs'.setup {
     ensure_installed = {"heex"},
