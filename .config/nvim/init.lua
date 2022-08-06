@@ -8,6 +8,7 @@ o.swapfile = false
 require('plugins')
 
 vim.opt.termguicolors = true
+vim.cmd [[colorscheme delek]]
 
 vim.cmd([[
 function! s:build_quickfix_list(lines)
