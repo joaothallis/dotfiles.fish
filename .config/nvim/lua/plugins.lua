@@ -29,7 +29,10 @@ return require('packer').startup(function()
 
     use {'bogado/file-line'}
 
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {
+        'nvim-treesitter/nvim-treesitter-refactor',
+        requires = {{'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}}
+    }
 
     use {'elixir-editors/vim-elixir'}
     use {'joaothallis/vim-elixir-alternative-files'}

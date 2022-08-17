@@ -8,7 +8,7 @@ o.swapfile = false
 require('plugins')
 
 vim.opt.termguicolors = true
-vim.cmd [[colorscheme delek]]
+vim.cmd [[colorscheme peachpuff]]
 
 vim.cmd([[
 function! s:build_quickfix_list(lines)
@@ -44,11 +44,17 @@ endif
 g.markdown_fenced_languages = {"python", "elixir"}
 
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"heex"},
+    ensure_installed = {"heex", "elixir"},
 
     sync_install = true,
 
-    highlight = {enable = true, additional_vim_regex_highlighting = false}
+    highlight = {enable = true, additional_vim_regex_highlighting = false},
+
+    refactor = {
+        highlight_definitions = {enable = true, clear_on_cursor_move = true},
+        highlight_current_scope = {enable = true},
+        smart_rename = {enable = true, keymaps = {smart_rename = "grr"}}
+    }
 }
 
 local opts = {noremap = true, silent = true}
