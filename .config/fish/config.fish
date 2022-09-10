@@ -5,7 +5,9 @@ end
 
 set -gx EDITOR nvim
 
-switch (uname)
-    case Linux
+switch (cat /etc/os-release | head -n 1)
+    case '*Ubuntu*'
+        source ~/.asdf/asdf.fish
+    case '*'
         source /opt/asdf-vm/asdf.fish
 end
