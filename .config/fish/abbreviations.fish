@@ -1,5 +1,7 @@
 abbr --add --universal config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+abbr --add --universal www '/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe'
+
 abbr --add --universal g git
 abbr --add --universal gr 'git reset --hard'
 abbr --add --universal gs 'git status'
