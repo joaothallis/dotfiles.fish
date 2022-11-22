@@ -7,6 +7,13 @@ o.swapfile = false
 
 require('plugins')
 
+local time = os.date("*t")
+if time.hour < 6 or time.hour > 18 then
+    vim.cmd([[set background=dark]])
+else
+    vim.cmd([[set background=light]])
+end
+
 vim.opt.termguicolors = true
 
 vim.cmd([[
