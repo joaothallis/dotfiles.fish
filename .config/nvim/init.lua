@@ -15,6 +15,7 @@ else
 end
 
 vim.opt.termguicolors = true
+vim.cmd [[colorscheme space-nvim]]
 
 vim.cmd([[
 function! s:build_quickfix_list(lines)

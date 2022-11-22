@@ -1,6 +1,8 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
+    use 'nassredean/space-nvim'
+
     use {'tyru/open-browser-github.vim', requires = {{'tyru/open-browser.vim'}}}
 
     use {'janko/vim-test', requires = {{'benmills/vimux'}}}
