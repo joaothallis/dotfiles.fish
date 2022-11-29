@@ -111,7 +111,7 @@ end
 
 local lsp_installer = require "nvim-lsp-installer"
 
-local servers = {"dockerls", "jsonls", "elixirls", "pylsp"}
+local servers = {"dockerls", "jsonls", "elixirls", "pylsp", "yamlls"}
 
 for _, name in pairs(servers) do
     local server_is_found, server = lsp_installer.get_server(name)
