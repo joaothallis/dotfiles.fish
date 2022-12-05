@@ -75,62 +75,17 @@ require'nvim-treesitter.configs'.setup {
     }
 }
 
-local opts = {noremap = true, silent = true}
-vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
-vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
+local lsp = require('lsp-zero')
 
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-    -- Enable completion triggered by <c-x><c-o>
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+lsp.preset('recommended')
 
-    -- Mappings.
-    -- See `:help vim.lsp.*` for documentation on any of the below functions
-    local bufopts = {noremap = true, silent = true, buffer = bufnr}
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-    vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder,
-                   bufopts)
-    vim.keymap.set('n', '<space>wl', function()
-        print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end, bufopts)
-    vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-    vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-    vim.keymap.set('n', '<space>f',
-                   function() vim.lsp.buf.format {async = true} end, bufopts)
-end
+lsp.ensure_installed({
+    "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "sumneko_lua", "ltex"
+})
 
-local lsp_installer = require "nvim-lsp-installer"
+lsp.nvim_workspace()
 
-local servers = {"dockerls", "jsonls", "elixirls", "pylsp", "yamlls"}
-
-for _, name in pairs(servers) do
-    local server_is_found, server = lsp_installer.get_server(name)
-    if server_is_found and not server:is_installed() then
-        print("Installing " .. name)
-        server:install()
-    end
-end
-
-for _, name in pairs(servers) do
-    lsp_installer.on_server_ready(function(server)
-        local opts = {
-            on_attach = on_attach,
-            flags = {debounce_text_changes = 150}
-        }
-
-        server:setup(opts)
-    end)
-end
+lsp.setup()
 
 require('gitsigns').setup {
     on_attach = function(bufnr)
