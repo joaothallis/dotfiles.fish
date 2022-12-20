@@ -32,3 +32,5 @@ abbr --add --universal m 'mix coveralls.html --umbrella && open cover/excoverall
 abbr --add --universal t tmux_new
 abbr --add --universal tl 'tmux ls'
 abbr --add --universal tm tmux
+
+abbr --add --universal n nmtui
