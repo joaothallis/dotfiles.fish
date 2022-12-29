@@ -5,6 +5,11 @@ return require('packer').startup(function()
 
     use {'tyru/open-browser-github.vim', requires = {{'tyru/open-browser.vim'}}}
 
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end
+    })
+
     use {'janko/vim-test', requires = {{'benmills/vimux'}}}
 
     use "sbdchd/neoformat"
