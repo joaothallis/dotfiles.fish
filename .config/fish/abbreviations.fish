@@ -34,3 +34,5 @@ abbr --add --universal tl 'tmux ls'
 abbr --add --universal tm tmux
 
 abbr --add --universal n nmtui
+
+abbr --add --universal my-branchs "git for-each-ref --format='%(refname:short) %(authorname)' refs/heads | grep (git config user.name) | cut -d' ' -f1"
