@@ -8,6 +8,8 @@ set -gx EDITOR nvim
 switch (uname -a)
     case '*MANJARO*'
         source /opt/asdf-vm/asdf.fish
+    case '*archlinux*'
+        source /opt/asdf-vm/asdf.fish
     case '*Linux*'
         source ~/.asdf/asdf.fish
     case 'Darwin*'
