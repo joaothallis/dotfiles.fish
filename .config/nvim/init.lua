@@ -87,6 +87,8 @@ lsp.nvim_workspace()
 
 lsp.setup()
 
+require"lsp_signature".setup()
+
 require('gitsigns').setup {
     on_attach = function(bufnr)
         local gs = package.loaded.gitsigns

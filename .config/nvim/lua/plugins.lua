@@ -25,6 +25,7 @@ return require('packer').startup(function()
             {'rafamadriz/friendly-snippets'}
         }
     }
+    use {"ray-x/lsp_signature.nvim"}
 
     use {
         'junegunn/fzf.vim',
