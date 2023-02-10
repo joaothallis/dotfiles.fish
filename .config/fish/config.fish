@@ -15,3 +15,5 @@ switch (uname -a)
     case 'Darwin*'
         source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
+
+. ~/.asdf/plugins/dotnet-core/set-dotnet-home.fish
