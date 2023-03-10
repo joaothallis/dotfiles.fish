@@ -5,6 +5,8 @@ end
 
 set -gx EDITOR nvim
 
+set -gx KERL_BUILD_DOCS yes
+
 switch (uname -a)
     case '*MANJARO*'
         source /opt/asdf-vm/asdf.fish
