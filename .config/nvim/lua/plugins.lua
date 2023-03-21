@@ -33,6 +33,11 @@ return require('packer').startup(function()
         requires = {'junegunn/fzf', run = './install --bin'}
     }
 
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/plenary.nvim'}}
+    }
+
     use {"Olical/vim-enmasse"}
 
     use "airblade/vim-rooter"

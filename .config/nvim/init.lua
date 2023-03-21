@@ -44,7 +44,8 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 ]])
 
-vim.api.nvim_set_keymap('n', '<Leader>ff', ":GitFiles<CR>", {noremap = true})
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.git_files, {})
 
 vim.api.nvim_set_keymap('n', '<Leader><Leader>',
                         ":call ElixirAlternateFile()<CR>",
