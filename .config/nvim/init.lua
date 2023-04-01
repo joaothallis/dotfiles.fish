@@ -81,7 +81,8 @@ local lsp = require('lsp-zero')
 lsp.preset('recommended')
 
 lsp.ensure_installed({
-    "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex"
+    "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex",
+    "clangd"
 })
 
 lsp.nvim_workspace()
