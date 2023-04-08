@@ -61,5 +61,5 @@ return require('packer').startup(function()
     use {'elixir-editors/vim-elixir'}
     use {'joaothallis/vim-elixir-alternative-files'}
 
-    use {'github/copilot.vim'}
+    use {"zbirenbaum/copilot-cmp", requires = {{"joaothallis/copilot.lua"}}}
 end)

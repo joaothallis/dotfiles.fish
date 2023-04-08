@@ -135,4 +135,23 @@ require('gitsigns').setup {
 
 require('Comment').setup()
 
-vim.g.copilot_enabled = false
+require('copilot').setup({
+    suggestion = {enabled = false},
+    panel = {enabled = false},
+    server_opts_overrides = {settings = {enable = false}}
+})
+
+require('copilot_cmp').setup()
+
+local cmp = require('cmp')
+
+cmp.setup({
+    sources = {{name = 'copilot'}, {name = 'nvim_lsp'}},
+    mapping = {
+        ['<CR>'] = cmp.mapping.confirm({
+            behavior = cmp.ConfirmBehavior.Replace,
+            select = false
+        })
+    }
+})
+
