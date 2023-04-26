@@ -1,3 +1,5 @@
 [user]
 	email = joaothallis@icloud.com
 	name = João Thallis
+[core]
+	excludesfile = /Users/joao/.gitignore_global
