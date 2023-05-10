@@ -189,3 +189,5 @@ bar {
 }
 
 bindsym $mod+i bar mode invisible
+
+exec picom
