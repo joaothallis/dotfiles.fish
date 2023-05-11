@@ -25,7 +25,7 @@ wireless _first_ {
 }
 
 ethernet _first_ {
-        format_up = "E: %ip (%speed)"
+        format_up = "E: %speed"
         format_down = "E: down"
 }
 
