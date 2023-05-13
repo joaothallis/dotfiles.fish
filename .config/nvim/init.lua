@@ -156,3 +156,13 @@ cmp.setup({
     }
 })
 
+require('copilot_status').setup()
+
+require('lualine').setup {
+    sections = {
+        lualine_x = {
+            require('copilot_status').status_string, 'encoding', 'fileformat',
+            'filetype'
+        }
+    }
+}
