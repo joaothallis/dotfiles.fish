@@ -49,7 +49,7 @@ abbr --add mc 'mix credo --strict'
 abbr --add md 'mix dialyzer'
 abbr --add mt 'mix test'
 abbr --add mtf 'mix test --failed'
-abbr --add m 'mix coveralls.html --umbrella && open cover/excoveralls.html'
+abbr --add m 'MIX_ENV=test mix coveralls.html --umbrella && open cover/excoveralls.html'
 
 abbr --add t tmux_new
 abbr --add tl 'tmux ls'
