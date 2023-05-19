@@ -5,7 +5,7 @@ o.clipboard = "unnamedplus"
 
 o.swapfile = false
 
-require('plugins')
+require("plugins")
 
 local time = os.date("*t")
 if time.hour < 6 or time.hour >= 17 then
@@ -44,10 +44,10 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 
 ]])
 
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.git_files, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.git_files, {})
 
-vim.api.nvim_set_keymap('n', '<Leader><Leader>',
+vim.api.nvim_set_keymap("n", "<Leader><Leader>",
                         ":call ElixirAlternateFile()<CR>",
                         {noremap = true, silent = true})
 
@@ -62,13 +62,10 @@ endif
 
 g.markdown_fenced_languages = {"python", "elixir", "bash"}
 
-require'nvim-treesitter.configs'.setup {
+require"nvim-treesitter.configs".setup {
     ensure_installed = {"heex", "elixir"},
-
     sync_install = true,
-
     highlight = {enable = true, additional_vim_regex_highlighting = false},
-
     refactor = {
         highlight_definitions = {enable = true, clear_on_cursor_move = true},
         highlight_current_scope = {enable = true},
@@ -76,9 +73,9 @@ require'nvim-treesitter.configs'.setup {
     }
 }
 
-local lsp = require('lsp-zero')
+local lsp = require("lsp-zero")
 
-lsp.preset('recommended')
+lsp.preset("recommended")
 
 lsp.ensure_installed({
     "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex",
@@ -93,7 +90,7 @@ require"lsp_signature".setup()
 
 require"fidget".setup {}
 
-require('gitsigns').setup {
+require("gitsigns").setup {
     on_attach = function(bufnr)
         local gs = package.loaded.gitsigns
 
@@ -104,67 +101,67 @@ require('gitsigns').setup {
         end
 
         -- Navigation
-        map('n', ']c', function()
-            if vim.wo.diff then return ']c' end
+        map("n", "]c", function()
+            if vim.wo.diff then return "]c" end
             vim.schedule(function() gs.next_hunk() end)
-            return '<Ignore>'
+            return "<Ignore>"
         end, {expr = true})
 
-        map('n', '[c', function()
-            if vim.wo.diff then return '[c' end
+        map("n", "[c", function()
+            if vim.wo.diff then return "[c" end
             vim.schedule(function() gs.prev_hunk() end)
-            return '<Ignore>'
+            return "<Ignore>"
         end, {expr = true})
 
         -- Actions
-        map({'n', 'v'}, '<leader>hs', ':Gitsigns stage_hunk<CR>')
-        map({'n', 'v'}, '<leader>hr', ':Gitsigns reset_hunk<CR>')
-        map('n', '<leader>hS', gs.stage_buffer)
-        map('n', '<leader>hu', gs.undo_stage_hunk)
-        map('n', '<leader>hR', gs.reset_buffer)
-        map('n', '<leader>hp', gs.preview_hunk)
-        map('n', '<leader>hb', function() gs.blame_line {full = true} end)
-        map('n', '<leader>tb', gs.toggle_current_line_blame)
-        map('n', '<leader>hd', gs.diffthis)
-        map('n', '<leader>hD', function() gs.diffthis('~') end)
-        map('n', '<leader>td', gs.toggle_deleted)
+        map({"n", "v"}, "<leader>hs", ":Gitsigns stage_hunk<CR>")
+        map({"n", "v"}, "<leader>hr", ":Gitsigns reset_hunk<CR>")
+        map("n", "<leader>hS", gs.stage_buffer)
+        map("n", "<leader>hu", gs.undo_stage_hunk)
+        map("n", "<leader>hR", gs.reset_buffer)
+        map("n", "<leader>hp", gs.preview_hunk)
+        map("n", "<leader>hb", function() gs.blame_line {full = true} end)
+        map("n", "<leader>tb", gs.toggle_current_line_blame)
+        map("n", "<leader>hd", gs.diffthis)
+        map("n", "<leader>hD", function() gs.diffthis("~") end)
+        map("n", "<leader>td", gs.toggle_deleted)
 
         -- Text object
-        map({'o', 'x'}, 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+        map({"o", "x"}, "ih", ":<C-U>Gitsigns select_hunk<CR>")
     end
 }
 
-require('Comment').setup()
+require("Comment").setup()
 
-require('copilot').setup({
+require("copilot").setup({
     suggestion = {enabled = false},
     panel = {enabled = false},
     server_opts_overrides = {settings = {enable = false}}
 })
 
-require('copilot_cmp').setup()
+require("copilot_cmp").setup()
 
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg = "#6CC644"})
 
-local cmp = require('cmp')
+local cmp = require("cmp")
 
 cmp.setup({
-    sources = {{name = 'copilot'}, {name = 'nvim_lsp'}},
+    sources = {{name = "copilot"}, {name = "nvim_lsp"}},
     mapping = {
-        ['<CR>'] = cmp.mapping.confirm({
+        ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
             select = false
         })
     }
 })
 
-require('copilot_status').setup()
+require("copilot_status").setup()
 
-require('lualine').setup {
+require("lualine").setup {
     sections = {
         lualine_x = {
-            require('copilot_status').status_string, 'encoding', 'fileformat',
-            'filetype'
+            require("copilot_status").status_string, "encoding", "fileformat",
+            "filetype"
         }
     }
 }
