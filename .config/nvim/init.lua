@@ -73,8 +73,8 @@ endif
 
 g.markdown_fenced_languages = {"python", "elixir", "bash"}
 
-require"nvim-treesitter.configs".setup {
-    ensure_installed = {"heex", "elixir"},
+require "nvim-treesitter.configs".setup {
+    ensure_installed = {"heex", "elixir", "python"},
     sync_install = true,
     highlight = {enable = true, additional_vim_regex_highlighting = false},
     refactor = {
