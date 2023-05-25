@@ -28,7 +28,7 @@ abbr --add g git
 abbr --add gr 'git reset --hard'
 abbr --add gs 'git status'
 abbr --add gd 'git diff'
-abbr --add gl 'git pull'
+abbr --add gl 'git pull --prune'
 abbr --add gp 'git push'
 abbr --add cb 'git checkout'
 abbr --add glog 'git log --oneline'
