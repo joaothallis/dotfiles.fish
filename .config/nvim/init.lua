@@ -47,17 +47,6 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 local builtin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>ff", builtin.git_files, {})
 
-vim.api.nvim_create_autocmd("VimEnter", {
-    callback = function()
-        if #vim.fn.argv() == 0 then
-            vim.defer_fn(function()
-                vim.cmd(
-                    "silent! lua require('telescope.builtin').git_files({layout_config = {width = 0.999, height = 0.999}})")
-            end, 500)
-        end
-    end
-})
-
 vim.api.nvim_set_keymap("n", "<Leader><Leader>",
                         ":call ElixirAlternateFile()<CR>",
                         {noremap = true, silent = true})
