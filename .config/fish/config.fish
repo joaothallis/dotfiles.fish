@@ -56,6 +56,7 @@ abbr --add m 'MIX_ENV=test mix coveralls.html --umbrella && open cover/excoveral
 abbr --add t tmux_new
 abbr --add tl 'tmux ls'
 abbr --add tm tmux
+abbr --add ta 'tmux attach'
 
 abbr --add n nmtui
 
