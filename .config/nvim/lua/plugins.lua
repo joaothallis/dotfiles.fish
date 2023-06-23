@@ -26,7 +26,7 @@ return require('packer').startup(function()
         }
     }
     use {"ray-x/lsp_signature.nvim"}
-    use 'j-hui/fidget.nvim'
+    use {'j-hui/fidget.nvim', tag = 'legacy'}
 
     use {
         'junegunn/fzf.vim',
