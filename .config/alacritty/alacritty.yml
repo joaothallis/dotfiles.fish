@@ -9,4 +9,4 @@ font:
     family: FiraCode Nerd Font
 
 key_bindings:
-  - { key: Return, mods: Command, action: ToggleSimpleFullscreen }
+  - { key: Return, mods: Command, action: ToggleFullscreen }
