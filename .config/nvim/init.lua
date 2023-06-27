@@ -54,6 +54,8 @@ vim.api.nvim_set_keymap("n", "<Leader><Leader>",
 vim.cmd([[
 let g:test#echo_command = 0
 
+let test#python#runner = 'pytest'
+
 if exists('$TMUX')
   let g:test#preserve_screen = 1
   let g:test#strategy = 'vimux'
