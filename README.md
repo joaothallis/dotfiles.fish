@@ -17,6 +17,7 @@ config config --local status.showUntrackedFiles no
 config reset --hard
 
 config checkout
-``` 
 
-
+mkdir ~/Projects
+git clone git@github.com:edentsai/tig-theme-molokai-like.git ~/Projects/tig-theme-molokai-like
+```
