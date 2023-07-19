@@ -1,0 +1,1 @@
+post_asdf_install_elixir = $(asdf where elixir $version)/bin/mix do local.hex --force, local.rebar --force
