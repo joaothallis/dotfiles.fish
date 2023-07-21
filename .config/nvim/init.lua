@@ -62,7 +62,7 @@ if exists('$TMUX')
 endif
 ]])
 
-g.markdown_fenced_languages = {"python", "elixir", "bash"}
+g.markdown_fenced_languages = {"python", "elixir", "bash", "dockerfile"}
 
 require"nvim-treesitter.configs".setup {
     ensure_installed = {"heex", "elixir", "python"},
