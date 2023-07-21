@@ -1,5 +1,11 @@
 function tmux_new
-    set session (basename (pwd))
+    switch ($argv)
+        case ''
+            set session (basename (pwd))
+        case '*'
+            set session $argv
+    end
+
     if test -n "$TMUX"
         tmux new -s $session -d
         set session (string replace -a . _ $session)
