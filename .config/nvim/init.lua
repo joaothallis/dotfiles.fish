@@ -3,6 +3,10 @@ local g = vim.g
 
 o.clipboard = "unnamedplus"
 
+o.number = true
+
+vim.opt.numberwidth = 1
+
 o.swapfile = false
 
 require("plugins")
