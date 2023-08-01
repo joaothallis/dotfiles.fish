@@ -39,6 +39,8 @@ return require('packer').startup(function()
 
     use {"Olical/vim-enmasse"}
 
+    use {'nvim-pack/nvim-spectre', requires = {{'nvim-lua/plenary.nvim'}}}
+
     use "airblade/vim-rooter"
 
     use {'tpope/vim-fugitive'}
