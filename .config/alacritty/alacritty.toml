@@ -3,6 +3,9 @@ import = ["~/.config/alacritty/catppuccin/catppuccin-latte.toml"]
 [font.normal]
 family = "IosevkaTerm Nerd Font"
 
+[font]
+size = 13
+
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
 key = "Return"
