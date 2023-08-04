@@ -1,10 +1,10 @@
 import = ["~/.config/alacritty/catppuccin/catppuccin-latte.toml"]
 
 [font.normal]
-family = "IosevkaTerm Nerd Font"
+family = "UbuntuMono Nerd Font"
 
 [font]
-size = 13
+size = 12
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
