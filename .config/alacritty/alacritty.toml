@@ -1,7 +1,7 @@
 import = ["~/.config/alacritty/catppuccin/catppuccin-latte.toml"]
 
 [font.normal]
-family = "FiraCode Nerd Font"
+family = "UbuntuMono Nerd Font"
 
 [[keyboard.bindings]]
 action = "ToggleFullscreen"
