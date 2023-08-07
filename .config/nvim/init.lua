@@ -85,7 +85,7 @@ lsp.preset("recommended")
 
 lsp.ensure_installed({
     "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex",
-    "clangd"
+    "clangd", "gopls"
 })
 
 lsp.nvim_workspace()
