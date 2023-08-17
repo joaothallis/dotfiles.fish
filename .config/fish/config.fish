@@ -7,6 +7,8 @@ set -gx EDITOR nvim
 
 set -gx KERL_BUILD_DOCS yes
 
+set -gx PATH "$PATH:/home/$USER/.local/bin"
+
 switch (uname -a)
     case '*MANJARO*'
         source /opt/asdf-vm/asdf.fish
