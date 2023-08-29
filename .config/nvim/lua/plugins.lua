@@ -3,8 +3,6 @@ return require('packer').startup(function()
 
     use 'joaothallis/space-nvim'
 
-    use {'tyru/open-browser-github.vim', requires = {{'tyru/open-browser.vim'}}}
-
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end
