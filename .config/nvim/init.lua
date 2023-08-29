@@ -135,6 +135,8 @@ require("gitsigns").setup {
     end
 }
 
+require"gitlinker".setup()
+
 require("Comment").setup()
 
 require("copilot").setup({

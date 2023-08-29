@@ -44,6 +44,9 @@ return require('packer').startup(function()
     use "airblade/vim-rooter"
 
     use {'tpope/vim-fugitive'}
+
+    use {'ruifm/gitlinker.nvim', requires = 'nvim-lua/plenary.nvim'}
+
     use {'rhysd/committia.vim'}
     use {'lewis6991/gitsigns.nvim'}
 
