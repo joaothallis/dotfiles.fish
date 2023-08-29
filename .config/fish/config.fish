@@ -16,6 +16,7 @@ switch (uname -a)
         source /opt/asdf-vm/asdf.fish
     case '*Linux*'
         source ~/.asdf/asdf.fish
+        eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
     case 'Darwin*'
         source /opt/homebrew/opt/asdf/libexec/asdf.fish
 end
