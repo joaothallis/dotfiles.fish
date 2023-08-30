@@ -41,6 +41,7 @@ abbr --add grm 'git checkout master && git pull --rebase && git checkout - && gi
 abbr --add gmm 'git checkout master && git pull --rebase && git checkout - && git pull --rebase && git merge -'
 
 abbr --add gpr 'gh pr create --assignee @me'
+abbr --add r request_review
 
 abbr --add d docker
 
