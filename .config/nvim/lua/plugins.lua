@@ -62,13 +62,4 @@ return require('packer').startup(function()
 
     use {'elixir-editors/vim-elixir'}
     use {'joaothallis/vim-elixir-alternative-files'}
-
-    use {"zbirenbaum/copilot-cmp", requires = {{"joaothallis/copilot.lua"}}}
-
-    use {"jonahgoldwastaken/copilot-status.nvim"}
-
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = {'nvim-tree/nvim-web-devicons', opt = true}
-    }
 end)

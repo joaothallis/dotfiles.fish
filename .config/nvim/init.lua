@@ -139,20 +139,10 @@ require"gitlinker".setup()
 
 require("Comment").setup()
 
-require("copilot").setup({
-    suggestion = {enabled = false},
-    panel = {enabled = false},
-    server_opts_overrides = {settings = {enable = false}}
-})
-
-require("copilot_cmp").setup()
-
-vim.api.nvim_set_hl(0, "CmpItemKindCopilot", {fg = "#6CC644"})
-
 local cmp = require("cmp")
 
 cmp.setup({
-    sources = {{name = "copilot"}, {name = "nvim_lsp"}},
+    sources = {{name = "nvim_lsp"}},
     mapping = {
         ["<CR>"] = cmp.mapping.confirm({
             behavior = cmp.ConfirmBehavior.Replace,
@@ -161,13 +151,3 @@ cmp.setup({
     }
 })
 
-require("copilot_status").setup()
-
-require("lualine").setup {
-    sections = {
-        lualine_x = {
-            require("copilot_status").status_string, "encoding", "fileformat",
-            "filetype"
-        }
-    }
-}
