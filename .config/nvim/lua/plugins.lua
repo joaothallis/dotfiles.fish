@@ -8,8 +8,6 @@ return require('packer').startup(function()
         run = function() vim.fn["mkdp#util#install"]() end
     })
 
-    use 'vimwiki/vimwiki'
-
     use {'janko/vim-test', requires = {{'benmills/vimux'}}}
 
     use "sbdchd/neoformat"
