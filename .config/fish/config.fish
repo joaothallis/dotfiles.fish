@@ -43,6 +43,9 @@ abbr --add gmm 'git checkout master && git pull --rebase && git checkout - && gi
 abbr --add gpr 'gh pr create --assignee @me'
 abbr --add r request_review
 
+abbr --add u 'docker compose up -d'
+abbr --add d 'docker compose down'
+
 abbr --add k kubectl
 
 abbr --add mf 'mix format'
