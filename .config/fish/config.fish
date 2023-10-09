@@ -9,20 +9,6 @@ set -gx KERL_BUILD_DOCS yes
 
 set -gx PATH "$PATH:/home/$USER/.local/bin"
 
-switch (uname -a)
-    case '*MANJARO*'
-        source /opt/asdf-vm/asdf.fish
-    case '*archlinux*'
-        source /opt/asdf-vm/asdf.fish
-    case '*Linux*'
-        source ~/.asdf/asdf.fish
-        eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-    case 'Darwin*'
-        source /opt/homebrew/opt/asdf/libexec/asdf.fish
-end
-
-. ~/.asdf/plugins/dotnet-core/set-dotnet-home.fish
-
 abbr --add config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 abbr --add www '/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge.exe'
@@ -63,3 +49,4 @@ abbr --add ta 'tmux attach'
 abbr --add n nmtui
 
 abbr --add my-branchs "git for-each-ref --format='%(refname:short) %(authorname)' refs/heads | grep (git config user.name) | cut -d' ' -f1"
+~/bin/rtx activate fish | source
