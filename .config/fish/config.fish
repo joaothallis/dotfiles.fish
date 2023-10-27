@@ -52,4 +52,4 @@ abbr --add ta 'tmux attach'
 abbr --add n nmtui
 
 abbr --add my-branchs "git for-each-ref --format='%(refname:short) %(authorname)' refs/heads | grep (git config user.name) | cut -d' ' -f1"
-~/bin/rtx activate fish | source
+$HOME/.local/share/rtx/bin/rtx activate fish | source
