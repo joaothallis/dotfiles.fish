@@ -35,6 +35,7 @@ abbr --add u 'docker compose up -d'
 abbr --add d 'docker compose down'
 
 abbr --add k kubectl
+abbr --add kg 'kubectl get'
 
 abbr --add mf 'mix format'
 abbr --add mc 'mix credo --strict'
