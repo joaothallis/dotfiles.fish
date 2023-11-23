@@ -190,3 +190,5 @@ bar {
 bindsym $mod+i bar mode invisible
 
 exec picom
+
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
