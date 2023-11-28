@@ -18,6 +18,7 @@ order += "disk /"
 order += "load"
 order += "memory"
 order += "tztime local"
+order += "volume master"
 
 wireless _first_ {
         format_up = "W:%quality"
@@ -50,4 +51,12 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
+}
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
 }
