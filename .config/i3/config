@@ -80,6 +80,9 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
+# Focus the next output (effectively toggles when you only have two outputs)
+bindsym $mod+x move workspace to output next
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
