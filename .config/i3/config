@@ -190,8 +190,8 @@ bar {
 	status_command i3status
 }
 
-bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 10%+
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 10%-
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%-
 
 bindsym $mod+i bar mode invisible
 
