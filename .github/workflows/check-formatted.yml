@@ -20,4 +20,4 @@ jobs:
         run: luarocks install --server=https://luarocks.org/dev luaformatter
 
       - name: Check lua code is formatted
-        run: lua-format --check .config/nvim/lua/plugins.lua .config/nvim/init.lua
+        run: lua-format --check .config/nvim/init.lua
