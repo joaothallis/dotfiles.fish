@@ -72,12 +72,23 @@ local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
 
-lsp.ensure_installed({
-    "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex",
-    "clangd", "gopls"
-})
+lsp.on_attach(function(client, bufnr) lsp.default_keymaps({buffer = bufnr}) end)
 
-lsp.nvim_workspace()
+require('mason').setup({})
+require('mason-lspconfig').setup({
+    handlers = {
+        lsp.default_setup,
+        lua_ls = function()
+            local lua_opts = lsp.nvim_lua_ls()
+            require('lspconfig').lua_ls.setup(lua_opts)
+        end
+    },
+    ensure_installed = {
+        "dockerls", "jsonls", "elixirls", "pylsp", "yamlls", "lua_ls", "ltex",
+        "clangd", "gopls"
+    },
+    handlers = {lsp.default_setup}
+})
 
 lsp.setup()
 
