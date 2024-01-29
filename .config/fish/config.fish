@@ -10,6 +10,7 @@ set -gx TERMINAL alacritty
 set -gx KERL_BUILD_DOCS yes
 
 set -gx PATH "$PATH:/home/$USER/.local/bin"
+set -gx PATH "$PATH:/home/$USER/.npm-global/bin"
 
 abbr --add config 'git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
