@@ -46,7 +46,7 @@ abbr --add md 'mix dialyzer'
 abbr --add mt 'mix test'
 abbr --add mtf 'mix test --failed'
 abbr --add m 'MIX_ENV=test mix coveralls.html --umbrella && open cover/excoveralls.html'
-abbr --add mcn 'mix test --cover --export-coverage default && mix test.coverage'
+abbr --add mcn 'mix test --cover && mix test.coverage'
 
 abbr --add t tmux_new
 abbr --add tl 'tmux ls'
