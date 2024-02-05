@@ -59,6 +59,8 @@ abbr --add my-branchs "git for-each-ref --format='%(refname:short) %(authorname)
 
 $HOME/.local/bin/mise activate fish | source
 
+. ~/.local/share/mise/plugins/dotnet-core/set-dotnet-home.fish
+
 # pnpm
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
