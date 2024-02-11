@@ -55,6 +55,8 @@ abbr --add ta 'tmux attach'
 
 abbr --add n nmtui
 
+abbr --add c cal_highlight
+
 abbr --add my-branchs "git for-each-ref --format='%(refname:short) %(authorname)' refs/heads | grep (git config user.name) | cut -d' ' -f1"
 
 $HOME/.local/bin/mise activate fish | source
