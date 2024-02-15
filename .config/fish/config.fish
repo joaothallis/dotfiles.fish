@@ -19,6 +19,7 @@ abbr --add www '/mnt/c/Program\ Files\ \(x86\)/Microsoft/Edge/Application/msedge
 abbr --add g git
 abbr --add gr 'git reset --hard'
 abbr --add gs 'git status'
+abbr --add gss 'git stash'
 abbr --add gd 'git diff'
 abbr --add gl 'git pull --prune'
 abbr --add gp 'git push'
