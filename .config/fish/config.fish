@@ -7,6 +7,7 @@ set -gx EDITOR nvim
 
 set -gx TERMINAL alacritty
 
+set -gx ELS_MODE language_server
 set -gx KERL_BUILD_DOCS yes
 
 set -gx PATH "$PATH:/home/$USER/.local/bin"
