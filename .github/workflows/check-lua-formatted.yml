@@ -1,0 +1,21 @@
+name: check-lua-formatted
+
+on: 
+  push:
+    paths:
+      - .config/nvim/lua/plugins.lua 
+      - .config/nvim/init.lua
+
+jobs:
+  check-formatted:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: leafo/gh-actions-lua@v9
+      - uses: leafo/gh-actions-luarocks@v4
+
+      - name: Install lua-format
+        run: luarocks install --server=https://luarocks.org/dev luaformatter
+
+      - name: Check lua code is formatted
+        run: lua-format --check .config/nvim/lua/plugins.lua .config/nvim/init.lua

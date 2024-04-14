@@ -1,6 +1,11 @@
 name: check-formatted
 
-on: push
+on:
+  push:
+    paths:
+      - .config/fish/*/** 
+      - .config/fish/*.fish
+      - .config/waybar/config.jsonc
 
 jobs:
   check-formatted:
@@ -12,15 +17,6 @@ jobs:
 
       - name: Check fish code is formatted
         run: fish_indent --check .config/fish/*/** .config/fish/*.fish
-
-      - uses: leafo/gh-actions-lua@v9
-      - uses: leafo/gh-actions-luarocks@v4
-
-      - name: Install lua-format
-        run: luarocks install --server=https://luarocks.org/dev luaformatter
-
-      - name: Check lua code is formatted
-        run: lua-format --check .config/nvim/lua/plugins.lua .config/nvim/init.lua
 
       - name: Check json code
         uses: sergeysova/jq-action@v2
