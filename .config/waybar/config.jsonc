@@ -8,12 +8,21 @@
     "sway/window"
   ],
   "modules-right": [
+    "backlight",
     "pulseaudio",
     "battery",
     "clock"
   ],
   "sway/window": {
     "max-length": 50
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "",
+      ""
+    ]
   },
   "pulseaudio": {
     "format": "{volume}% {icon}",
