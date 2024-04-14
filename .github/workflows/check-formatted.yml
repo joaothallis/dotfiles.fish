@@ -21,3 +21,8 @@ jobs:
 
       - name: Check lua code is formatted
         run: lua-format --check .config/nvim/lua/plugins.lua .config/nvim/init.lua
+
+      - name: Check json code
+        uses: sergeysova/jq-action@v2
+        with:
+          cmd: jq empty .config/waybar/config.jsonc
