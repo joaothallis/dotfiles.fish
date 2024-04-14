@@ -210,6 +210,11 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+#
+# Brightness:
+#
+bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5%+
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%- --min-value=1
 
 #
 # Status Bar:
