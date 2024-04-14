@@ -29,18 +29,23 @@
     "format-bluetooth": "{volume}% {icon}",
     "format-muted": "",
     "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", ""]
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
     },
     "scroll-step": 1,
     "on-click": "pavucontrol",
-    "ignored-sinks": ["Easy Effects Sink"]
-},
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  },
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": [
