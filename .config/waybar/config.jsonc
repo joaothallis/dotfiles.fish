@@ -8,12 +8,30 @@
     "sway/window"
   ],
   "modules-right": [
+    "pulseaudio",
     "battery",
     "clock"
   ],
   "sway/window": {
     "max-length": 50
   },
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+},
   "battery": {
     "format": "{capacity}% {icon}",
     "format-icons": [
