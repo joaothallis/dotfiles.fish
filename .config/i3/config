@@ -194,7 +194,7 @@ bar {
 }
 
 bindsym XF86MonBrightnessUp exec --no-startup-id sudo brightnessctl set 5%+
-bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec --no-startup-id sudo brightnessctl set 5%- --min-value=1
 
 bindsym $mod+i bar mode invisible
 
