@@ -86,8 +86,7 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         "dockerls", "jsonls", "elixirls", "yamlls", "lua_ls", "ltex", "clangd",
         "gopls"
-    },
-    handlers = {lsp.default_setup}
+    }
 })
 
 lsp.setup()
