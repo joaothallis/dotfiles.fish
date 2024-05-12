@@ -212,6 +212,4 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 exec picom
 
-exec guake
-
 bindsym $mod+Shift+s exec ~/.screenlayout/laptop.sh
